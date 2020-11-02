@@ -88,7 +88,7 @@ class SchoolRegistrationsController extends Controller
      */
     public function edit(SchoolRegistration $schoolRegistration)
     {
-        return view( 'pendaftaran.show', compact('schoolRegistration'));
+        return view(compact('schoolRegistration'));
     }
 
     /**
