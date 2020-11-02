@@ -32,7 +32,7 @@ Route::get('/pendaftaran/{id}', 'SchoolRegistrationsController@show');
 Route::post('/pendaftaran', 'SchoolRegistrationsController@store');
 Route::delete('/pendaftaran/{SchoolRegistration}', 'SchoolRegistrationsController@destroy');
 Route::get('/pendaftaran/{SchoolRegistration}', 'SchoolRegistrationsController@edit');
-Route::patch('/pendaftaran/{SchoolRegistration}', 'SchoolRegistrationsController@update');
+Route::patch('/pendaftaran/update/{schoolRegistration}', 'SchoolRegistrationsController@update');
 
 
 

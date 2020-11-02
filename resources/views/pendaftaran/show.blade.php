@@ -92,7 +92,7 @@
                         </div>
                         <div class="modal-body"> 
 
-                            <form method="post" action="/pendaftaran/{{$SchoolRegistration->id}}">
+                            <form method="post" action="{{url('pendaftaran/update/' . $SchoolRegistration->id)}}">
                                 @method('patch')
                                 @csrf
                                 <div class="form-group">
@@ -320,12 +320,12 @@
                                     </div>
                                     @enderror
                                 </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-warning" >Update</button>
+                                    <a href="/pendaftaran/{{$SchoolRegistration->id}}" class="btn btn-outline-secondary">Close</a>
+                                </div>
                             </form>
 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-warning" data-dismiss="modal">Update</button>
-                            <a href="/pendaftaran/{{$SchoolRegistration->id}}" class="btn btn-outline-secondary">Close</a>
                         </div>
                     </div>
                 </div>

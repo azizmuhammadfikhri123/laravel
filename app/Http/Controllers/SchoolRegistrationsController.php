@@ -100,6 +100,7 @@ class SchoolRegistrationsController extends Controller
      */
     public function update(Request $request, SchoolRegistration $schoolRegistration)
     {
+        // dd($schoolRegistration);
         $request->validate([
             'nama_lengkap' => 'required' ,
             'jenis_kelamin' => 'required',
@@ -128,8 +129,7 @@ class SchoolRegistrationsController extends Controller
             'minat_bidang' => 'required',
         ]);
 
-        SchoolRegistration::where('id', $schoolRegistration->id)
-            ->update([
+        $schoolRegistration->update([
                 'nama_lengkap' => $request->nama_lengkap,
                 'jenis_kelamin' => $request->jenis_kelamin,
                 'tempat_lahir' => $request->tempat_lahir,
@@ -157,8 +157,8 @@ class SchoolRegistrationsController extends Controller
                 'minat_bidang' => $request->minat_bidang
 
             ]);
-        
-            return redirect('/pendaftaran')->with('status', 'Data berhasil diupdate!');
+        // dd($data);
+        return redirect('/pendaftaran')->with('status', 'Data berhasil diupdate!');
     }
 
     /**
