@@ -97,103 +97,228 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="nama_lengkap">Nama Lengkap</label>
-                                    <input type="text" class="form-control" id="nama_lengkap"  name="nama_lengkap" value="{{$SchoolRegistration->nama_lengkap}}">
+                                    <input type="text" class="form-control @error('nama_lengkap')is-invalid @enderror" id="nama_lengkap"  name="nama_lengkap" value="{{$SchoolRegistration->nama_lengkap}}">
+                                    @error('nama_lengkap')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="jenis_kelamin">Jenis Kelamin</label>
-                                    <input type="text" class="form-control" id="jenis_kelamin"  name="jenis_kelamin" value="{{$SchoolRegistration->jenis_kelamin}}">
+                                    <input type="text" class="form-control @error('jenis_kelamin')is-invalid @enderror" id="jenis_kelamin"  name="jenis_kelamin" value="{{$SchoolRegistration->jenis_kelamin}}">
+                                    @error('jenis_kelamin')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="tempat_lahir">Tempat lahir</label>
-                                    <input type="text" class="form-control" id="tempat_lahir"  name="tempat_lahir" value="{{$SchoolRegistration->tempat_lahir}}">
+                                    <input type="text" class="form-control @error('tempat_lahir')is-invalid @enderror" id="tempat_lahir"  name="tempat_lahir" value="{{$SchoolRegistration->tempat_lahir}}">
+                                    @error('tempat_lahir')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="tanggal_lahir">Tanggal Lahir</label>
-                                    <input type="text" class="form-control" id="tanggal_lahir"  name="tanggal_lahir" value="{{$SchoolRegistration->tanggal_lahir}}">
+                                    <input type="text" class="form-control @error('tanggal_lahir')is-invalid @enderror" id="tanggal_lahir"  name="tanggal_lahir" value="{{$SchoolRegistration->tanggal_lahir}}">
+                                    @error('tanggal_lahir')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="agama">Agama</label>
-                                    <input type="text" class="form-control" id="agama" name="agama" value="{{$SchoolRegistration->agama}}">
+                                    <input type="text" class="form-control @error('agama')is-invalid @enderror" id="agama" name="agama" value="{{$SchoolRegistration->agama}}">
+                                    @error('agama')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="alamat">Alamat</label>
-                                    <textarea type="text" class="form-control" id="alamat"  name="alamat">{{$SchoolRegistration->alamat}}</textarea> 
+                                    <textarea type="text" class="form-control @error('alamat')is-invalid @enderror" id="alamat"  name="alamat">{{$SchoolRegistration->alamat}}</textarea> 
+                                    @error('alamat')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="rt">Rt</label>
-                                    <input type="text" class="form-control" id="rt" name="rt" value="{{$SchoolRegistration->rt}}">
+                                    <input type="text" class="form-control @error('rt')is-invalid @enderror" id="rt" name="rt" value="{{$SchoolRegistration->rt}}">
+                                    @error('rt')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="rw">Rw</label>
-                                    <input type="text" class="form-control" id="rw"  name="rw" value="{{$SchoolRegistration->rw}}">
+                                    <input type="text" class="form-control @error('rw')is-invalid @enderror" id="rw"  name="rw" value="{{$SchoolRegistration->rw}}">
+                                    @error('rw')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="kelurahan">Kelurahan</label>
-                                    <input type="text" class="form-control" id="kelurahan"  name="kelurahan" value="{{$SchoolRegistration->kelurahan }}">
+                                    <input type="text" class="form-control @error('kelurahan')is-invalid @enderror" id="kelurahan"  name="kelurahan" value="{{$SchoolRegistration->kelurahan }}">
+                                    @error('kelurahan')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="kecamatan">Kecamatan</label>
-                                    <input type="text" class="form-control" id="kecamatan"  name="kecamatan" value="{{$SchoolRegistration->kecamatan}}">
+                                    <input type="text" class="form-control @error('kecamatan')is-invalid @enderror" id="kecamatan"  name="kecamatan" value="{{$SchoolRegistration->kecamatan}}">
+                                    @error('kecamatan')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="kabupaten">Kabupaten</label>
-                                    <input type="text" class="form-control" id="kabupaten"  name="kabupaten" value="{{$SchoolRegistration->kabupaten}}">
+                                    <input type="text" class="form-control @error('kabupaten')is-invalid @enderror" id="kabupaten"  name="kabupaten" value="{{$SchoolRegistration->kabupaten}}">
+                                    @error('kabupaten')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="kode_pos">Kode Pos</label>
-                                    <input type="text" class="form-control" id="kode_pos"  name="kode_pos" value="{{$SchoolRegistration->kode_pos}}">
+                                    <input type="text" class="form-control @error('kode_pos')is-invalid @enderror" id="kode_pos"  name="kode_pos" value="{{$SchoolRegistration->kode_pos}}">
+                                    @error('tanggal_lahir')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="nomor_hp">NO Hp</label>
-                                    <input type="text" class="form-control" id="nomor_hp"  name="nomor_hp" value="{{$SchoolRegistration->nomor_hp}}">
+                                    <label for="nomor_hp">No Hp</label>
+                                    <input type="text" class="form-control @error('nomor_hp')is-invalid @enderror" id="nomor_hp"  name="nomor_hp" value="{{$SchoolRegistration->nomor_hp}}">
+                                    @error('nomor_hp')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email"  name="email" value="{{$SchoolRegistration->email}}">
+                                    <input type="email" class="form-control @error('email')is-invalid @enderror" id="email"  name="email" value="{{$SchoolRegistration->email}}">
+                                    @error('email')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_ayah">Nama Ayah</label>
-                                    <input type="text" class="form-control" id="nama_ayah" name="nama_ayah" value="{{$SchoolRegistration->nama_ayah}}">
+                                    <input type="text" class="form-control @error('nama_ayah')is-invalid @enderror" id="nama_ayah" name="nama_ayah" value="{{$SchoolRegistration->nama_ayah}}">
+                                    @error('nama_ayah')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_ibu">Nama Ibu</label>
-                                    <input type="text" class="form-control" id="nama_ibu"  name="nama_ibu" value="{{$SchoolRegistration->nama_ibu}}">
+                                    <input type="text" class="form-control @error('nama_ibu')is-invalid @enderror" id="nama_ibu"  name="nama_ibu" value="{{$SchoolRegistration->nama_ibu}}">
+                                    @error('nama_ibu')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="asal_smp">Asal SMP</label>
-                                    <input type="text" class="form-control" id="asal_smp"  name="asal_smp" value="{{$SchoolRegistration->asal_smp}}">
+                                    <input type="text" class="form-control @error('asal_smp')is-invalid @enderror" id="asal_smp"  name="asal_smp" value="{{$SchoolRegistration->asal_smp}}">
+                                    @error('asal_smp')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="nisn">NISN</label>
-                                    <input type="text" class="form-control" id="nisn" name="nisn" value="{{$SchoolRegistration->nisn}}">
+                                    <input type="text" class="form-control @error('nisn')is-invalid @enderror" id="nisn" name="nisn" value="{{$SchoolRegistration->nisn}}">
+                                    @error('nisn')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="kartu_keluarga">Kartu Keluarga</label>
-                                    <input type="text" class="form-control" id="kartu_keluarga" name="kartu_keluarga" value="{{$SchoolRegistration->kartu_keluarga}}">
+                                    <input type="text" class="form-control @error('kartu_keluarga')is-invalid @enderror" id="kartu_keluarga" name="kartu_keluarga" value="{{$SchoolRegistration->kartu_keluarga}}">
+                                    @error('kartu_keluarga')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="nik_siswa">NIK Siswa</label>
-                                    <input type="text" class="form-control" id="nik_siswa" name="nik_siswa" value="{{$SchoolRegistration->nik_siswa}}">
+                                    <input type="text" class="form-control @error('nik_siswa')is-invalid @enderror" id="nik_siswa" name="nik_siswa" value="{{$SchoolRegistration->nik_siswa}}">
+                                    @error('nik_siswa')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="nik_ayah">NIK Ayah</label>
-                                    <input type="text" class="form-control" id="nik_ayah"  name="nik_ayah" value="{{$SchoolRegistration->nik_ayah}}">
+                                    <input type="text" class="form-control @error('nik_ayah')is-invalid @enderror" id="nik_ayah"  name="nik_ayah" value="{{$SchoolRegistration->nik_ayah}}">
+                                    @error('nik_ayah')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="nik_ibu">NIK Ibu</label>
-                                    <input type="text" class="form-control" id="nik_ibu" name="nik_ibu" value="{{$SchoolRegistration->nik_ibu}}">
+                                    <input type="text" class="form-control @error('nik_ibu')is-invalid @enderror" id="nik_ibu" name="nik_ibu" value="{{$SchoolRegistration->nik_ibu}}">
+                                    @error('nik_ibu')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaan_ayah">Pekerjaan Ayah</label>
-                                    <input type="text" class="form-control" id="pekerjaan_ayah" name="pekerjaan_ayah" value="{{$SchoolRegistration->pekerjaan_ayah}}">
+                                    <input type="text" class="form-control @error('pekerjaan_ayah')is-invalid @enderror" id="pekerjaan_ayah" name="pekerjaan_ayah" value="{{$SchoolRegistration->pekerjaan_ayah}}">
+                                    @error('pekerjaan_ayah')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaan_ibu">Pekerjaan Ibu</label>
-                                    <input type="text" class="form-control" id="pekerjaan_ibu"  name="pekerjaan_ibu" value="{{$SchoolRegistration->pekerjaan_ibu}}">
+                                    <input type="text" class="form-control @error('pekerjaan_ibu')is-invalid @enderror" id="pekerjaan_ibu"  name="pekerjaan_ibu" value="{{$SchoolRegistration->pekerjaan_ibu}}">
+                                    @error('pekerjaan_ibu')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="minat_bidang">Minat Bidang</label>
-                                    <input type="text" class="form-control" id="minat_bidang" name="minat_bidang" value="{{$SchoolRegistration->minat_bidang}}">
+                                    <input type="text" class="form-control @error('minat_bidang')is-invalid @enderror" id="minat_bidang" name="minat_bidang" value="{{$SchoolRegistration->minat_bidang}}">
+                                    @error('minat_bidang')
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                             </form>
 

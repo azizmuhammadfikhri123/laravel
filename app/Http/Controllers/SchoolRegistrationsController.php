@@ -37,9 +37,36 @@ class SchoolRegistrationsController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nama_lengkap' => 'required' ,
+            'jenis_kelamin' => 'required',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required',
+            'agama' => 'required',
+            'alamat' => 'required',
+            'rt' => 'required',
+            'rw' => 'required',
+            'kelurahan' => 'required',
+            'kecamatan' =>'required',
+            'kabupaten' => 'required',
+            'kode_pos' => 'required',
+            'nomor_hp' =>'required',
+            'email' => 'required',
+            'nama_ayah' => 'required' ,
+            'nama_ibu' => 'required',
+            'asal_smp' => 'required',
+            'nisn' => 'required',
+            'kartu_keluarga' => 'required',
+            'nik_siswa' => 'required',
+            'nik_ayah' => 'required',
+            'nik_ibu' => 'required',
+            'pekerjaan_ayah' => 'required',
+            'pekerjaan_ibu' => 'required',
+            'minat_bidang' => 'required',
+        ]);
 
         SchoolRegistration::create($request->all());
-        return redirect('/pendaftaran');
+        return redirect('/pendaftaran')->with('status', 'Data berhasil ditambahkan!');
     }
 
     /**
@@ -61,7 +88,7 @@ class SchoolRegistrationsController extends Controller
      */
     public function edit(SchoolRegistration $schoolRegistration)
     {
-        return view( compact('schoolRegistration'));
+        return view( 'pendaftaran.show', compact('schoolRegistration'));
     }
 
     /**
@@ -73,6 +100,34 @@ class SchoolRegistrationsController extends Controller
      */
     public function update(Request $request, SchoolRegistration $schoolRegistration)
     {
+        $request->validate([
+            'nama_lengkap' => 'required' ,
+            'jenis_kelamin' => 'required',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required',
+            'agama' => 'required',
+            'alamat' => 'required',
+            'rt' => 'required',
+            'rw' => 'required',
+            'kelurahan' => 'required',
+            'kecamatan' =>'required',
+            'kabupaten' => 'required',
+            'kode_pos' => 'required',
+            'nomor_hp' =>'required',
+            'email' => 'required',
+            'nama_ayah' => 'required' ,
+            'nama_ibu' => 'required',
+            'asal_smp' => 'required',
+            'nisn' => 'required',
+            'kartu_keluarga' => 'required',
+            'nik_siswa' => 'required',
+            'nik_ayah' => 'required',
+            'nik_ibu' => 'required',
+            'pekerjaan_ayah' => 'required',
+            'pekerjaan_ibu' => 'required',
+            'minat_bidang' => 'required',
+        ]);
+
         SchoolRegistration::where('id', $schoolRegistration->id)
             ->update([
                 'nama_lengkap' => $request->nama_lengkap,
@@ -103,7 +158,7 @@ class SchoolRegistrationsController extends Controller
 
             ]);
         
-            return redirect('/pendaftaran');
+            return redirect('/pendaftaran')->with('status', 'Data berhasil diupdate!');
     }
 
     /**
@@ -115,6 +170,6 @@ class SchoolRegistrationsController extends Controller
     public function destroy(SchoolRegistration $SchoolRegistration)
     {
         SchoolRegistration::destroy( $SchoolRegistration->id );
-        return redirect('/pendaftaran');
+        return redirect('/pendaftaran')->with('status', 'Data berhasil dihapus!');
     }
 }

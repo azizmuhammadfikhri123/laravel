@@ -4,10 +4,16 @@
 @section('container') 
 <div class="container">
     <div class="row">
-        <div class="col-8">     
+        <div class="col-6">     
             <h1 class="my-4">Pendaftaran Sekolah</h1>
 
             <a href="/pendaftaran/create" class="btn btn-outline-primary my-3">Input Siswa</a>
+
+            @if (session('status'))
+                <div class="alert alert-success">
+                    {{session('status')}}
+                </div>   
+            @endif
 
             <ul class="list-group table table-striped ">
                 @foreach ($pendaftaran as $pendaftaran)  
