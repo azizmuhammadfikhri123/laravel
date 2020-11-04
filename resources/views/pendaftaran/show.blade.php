@@ -1,14 +1,30 @@
 @extends('layout.main')
-@section('title', 'Halaman Detail')
-    
-@section('container') 
-<div class="container">
-    <div class="row">
-        <div class="col-6">     
-            <h1 class="my-4">Detail Siswa</h1>
-            <hr>
+@section('title', 'Halaman Show')
+@section('breadcrumbs')
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Show Data Siswa</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="page-header float-right">
+                <div class="page-title">
+                    <ol class="breadcrumb text-right">
+                        <li class="active"><i class="fa fa-dashboard"></i></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+@section('content') 
+<div class="content mt-3">
 
-            {{-- <a href="" class="btn btn-outline-warning">Update</a> --}}
+    <div class="animated fadeIn">
+        {{-- <a href="" class="btn btn-outline-warning">Update</a> --}}
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#formModal">
                 Update
@@ -325,12 +341,15 @@
                                     <a href="/pendaftaran/{{$SchoolRegistration->id}}" class="btn btn-outline-secondary">Close</a>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        
     </div>
+
 </div>
 @endsection
+
+            

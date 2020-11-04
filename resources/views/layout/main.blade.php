@@ -1,42 +1,128 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@yield('title') - MyProject</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="{{ asset('style/assets/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('styleassets/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/assets/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/assets/css/cs-skin-elastic.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/assets/scss/style.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    
+    <script src="{{ asset('style/assets/js/vendor/jquery-2.1.4.min.js') }}"></script>
+    <script src="{{ asset('style/assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('style/assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('style/assets/js/main.js') }}"></script>
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-        <title>@yield('title')</title>
-    </head>
-    <body>
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand " href={{'/'}}>Laravel</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
                 </button>
-                <form class="form-inline ">
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav d-inline">
-                            <a class="btn btn-outline-primary glyphicon glyphicon-home" href="{{'/'}}">Home</a>
-                            <a class="btn btn-outline-primary" href="{{'/about'}}">About</a>
-                            <a class="btn btn-outline-primary" href="{{'/siswa'}}">Siswa</a>
-                            <a class="btn btn-outline-primary" href="{{'/pendaftaran'}}">Pendaftaran Sekolah</a>
+                <a class="navbar-brand" href="">MyProject</a>
+                <a class="navbar-brand hidden" href="">M</a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/"> <i class="menu-icon fa fa-dashboard"></i>Home </a>
+                    </li>
+                    <li>
+                        <a href="/about"> <i class="menu-icon fa fa-puzzle-piece"></i>About </a>
+                    </li>
+                    <li>
+                        <a href="/siswa"> <i class="menu-icon fa fa-puzzle-piece"></i>Siswa</a>
+                    </li>
+                    <li>
+                        <a href="/pendaftaran"> <i class="menu-icon fa fa-puzzle-piece"></i>Pendaftaran Sekolah</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <div id="right-panel" class="right-panel">
+        <header id="header" class="header">
+            <div class="header-menu">
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+                        <div class="dropdown for-notification">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"></i>
+                                <span class="count bg-danger">3</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="notification">
+                                <p class="red">You have 3 Notification</p>
+                                <a class="dropdown-item media bg-flat-color-1" href="#">
+                                    <i class="fa fa-check"></i>
+                                    <p>Server #1 overloaded.</p>
+                                </a>
+                                <a class="dropdown-item media bg-flat-color-4" href="#">
+                                    <i class="fa fa-info"></i>
+                                    <p>Server #2 overloaded.</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </form>
+                </div>
+ 
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="{{ asset('style/images/admin.jpg') }}">
+                        </a>
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
+                            <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
+                        </div>
+                    </div>
+ 
+                    <div class="language-select dropdown" id="language-select">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
+                            <i class="flag-icon flag-icon-id"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="language" >
+                            <div class="dropdown-item">
+                                <span class="flag-icon flag-icon-id"></span>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="flag-icon flag-icon-es"></i>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="flag-icon flag-icon-us"></i>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="flag-icon flag-icon-jp"></i>
+                            </div>
+                        </div>
+                    </div>
+ 
+                </div>
             </div>
-        </nav>
+ 
+        </header><!-- /header -->
+        @yield('breadcrumbs')
+        @yield('content')
+    </div>    
 
-        @yield('container')
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    </body>
+</body>
 </html>

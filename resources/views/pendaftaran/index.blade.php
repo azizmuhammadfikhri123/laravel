@@ -1,13 +1,30 @@
 @extends('layout.main')
 @section('title', 'Halaman Pendaftaran')
-    
-@section('container') 
-<div class="container">
-    <div class="row">
-        <div class="col-6">     
-            <h1 class="my-4">Pendaftaran Sekolah</h1>
+@section('breadcrumbs')
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Dashboard</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="page-header float-right">
+                <div class="page-title">
+                    <ol class="breadcrumb text-right">
+                        <li class="active"><i class="fa fa-dashboard"></i></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+@section('content') 
+<div class="content mt-3">
 
-            <a href="/pendaftaran/create" class="btn btn-outline-primary my-3">Input Siswa</a>
+    <div class="animated fadeIn">
+        <a href="/pendaftaran/create" class="btn btn-outline-primary my-3">Input Siswa</a>
 
             @if (session('status'))
                 <div class="alert alert-success">
@@ -21,11 +38,12 @@
                     {{$pendaftaran->nama_lengkap}}
                     <a href="/pendaftaran/{{$pendaftaran->id}}" class="btn btn-outline-primary">Detail</a>
                 </li>
-                @endforeach
-            
+                @endforeach  
             </ul>
-
-        </div>
     </div>
+
 </div>
 @endsection
+
+            
+
