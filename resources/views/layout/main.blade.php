@@ -30,19 +30,18 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="">MyProject</a>
-                <a class="navbar-brand hidden" href="">M</a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/"> <i class="menu-icon fa fa-dashboard"></i>Home </a>
+                        <a href="/"> <i class="menu-icon fa fa-home"></i>Home </a>
                     </li>
                     <li>
-                        <a href="/about"> <i class="menu-icon fa fa-puzzle-piece"></i>About </a>
+                        <a href="/about"> <i class="menu-icon fa fa-eye"></i>About </a>
                     </li>
                     <li>
-                        <a href="/siswa"> <i class="menu-icon fa fa-puzzle-piece"></i>Siswa</a>
+                        <a href="/siswa"> <i class="menu-icon fa fa-user"></i>Siswa</a>
                     </li>
                     <li>
                         <a href="/pendaftaran"> <i class="menu-icon fa fa-puzzle-piece"></i>Pendaftaran Sekolah</a>
@@ -84,7 +83,7 @@
                         </div>
                     </div>
                 </div>
- 
+
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -95,7 +94,7 @@
                             <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
                         </div>
                     </div>
- 
+
                     <div class="language-select dropdown" id="language-select">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
                             <i class="flag-icon flag-icon-id"></i>
@@ -115,10 +114,10 @@
                             </div>
                         </div>
                     </div>
- 
+
                 </div>
             </div>
- 
+
         </header><!-- /header -->
         @yield('breadcrumbs')
         @yield('content')
