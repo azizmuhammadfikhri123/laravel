@@ -16,9 +16,11 @@ Route::get('/', function(){
     return view('welcome');
 });
 
+Route::group(['middleware' => 'AksesLoginMiddleware'], function(){
     Route::get('/dashboard', 'PagesController@index');
     Route::get('/about', 'PagesController@about');
-     
+    Route::get('/logout', 'PagesController@logout');
+
     //siswa
     Route::get('/siswa', 'SiswaController@index');
     Route::get('/siswa/create', 'SiswaController@create');
@@ -36,12 +38,7 @@ Route::get('/', function(){
     Route::delete('/pendaftaran/{SchoolRegistration}', 'SchoolRegistrationsController@destroy');
     Route::get('/pendaftaran/{SchoolRegistration}', 'SchoolRegistrationsController@edit');
     Route::patch('/pendaftaran/update/{schoolRegistration}', 'SchoolRegistrationsController@update');
-
-
-
-
-
-
+});
 
 
 Auth::routes();
