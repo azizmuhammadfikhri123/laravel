@@ -29,13 +29,13 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="/">MyProject</a>
+                <a class="navbar-brand" href="/dashboard">MyProject</a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/"> <i class="menu-icon fa fa-home"></i>Home </a>
+                        <a href="/dashboard"> <i class="menu-icon fa fa-home"></i>Home </a>
                     </li>
                     <li>
                         <a href="/about"> <i class="menu-icon fa fa-eye"></i>About </a>
