@@ -18,7 +18,7 @@ class PagesController extends Controller
 
     public function logout(Request $request)
     {
-        return redirect('/');
+        // return redirect('/');
     }
     
 }

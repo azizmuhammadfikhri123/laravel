@@ -16,7 +16,7 @@ Route::get('/', function(){
     return view('welcome');
 });
 
-Route::group(['middleware' => 'AksesLoginMiddleware'], function(){
+Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', 'PagesController@index');
     Route::get('/about', 'PagesController@about');
     Route::get('/logout', 'PagesController@logout');
