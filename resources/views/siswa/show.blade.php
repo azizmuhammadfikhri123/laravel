@@ -33,18 +33,18 @@
                         </strong>
                     </div>
                     <div class="pull-right">
-                        <a href="{{$student->id}}/edit" class="btn btn-warning">
+                        <a href="{{$student->id}}/edit" class="btn btn-sm btn-warning">
                             <i class="fa fa-gear"></i> edit
                         </a>
                         <form method="post" action="/siswa/{{ $student->id }}" class="d-inline">
                             @method('delete')
                             @csrf
-                            <button type="submit" class="btn btn-danger">
-                                <i class="fa fa-x-circle"></i> delete
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                <i class="fa fa-trash-o"></i> delete
                             </button>
                         </form>
-                        <a href="/siswa" class="btn btn-primary">
-                            <i class="fa fa-backspace-fill"></i> Kembali
+                        <a href="/siswa" class="btn btn-sm btn-primary">
+                            <i class="fa fa-hand-o-left"></i> Kembali
                         </a>
                     </div>
                 </div>      

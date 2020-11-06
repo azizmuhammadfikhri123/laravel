@@ -26,16 +26,16 @@
     <div class="animated fadeIn">
         {{-- <a href="" class="btn btn-outline-warning">Update</a> --}}
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#formModal">
+            <button type="button" class="btn btn-sm btn-outline-warning" data-toggle="modal" data-target="#formModal">
                 Update
             </button>
             
             <!-- Button trigger modal delete -->
-            <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
                 Delete
             </button>
 
-            <a href="/pendaftaran" class="btn btn-outline-primary">Kembali</a>
+            <a href="/pendaftaran" class="btn btn-sm btn-outline-primary">Kembali</a>
 
 
             <div class="card my-3">

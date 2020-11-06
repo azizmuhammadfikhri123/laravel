@@ -34,7 +34,7 @@
                         </strong>
                     </div>
                     <div class="pull-right">
-                        <a href="/siswa/create" class="btn btn-success">
+                        <a href="/siswa/create" class="btn btn-sm btn-success">
                             <i class="fa fa-plus"></i> New Data
                         </a>
                     </div>
@@ -50,7 +50,8 @@
                         @foreach ($siswa as $ssw)
                             <li class="list-group-item d-flex justify-content-between align-items-center  text-black">
                                 {{$ssw->nama}}
-                                <a href="/siswa/{{ $ssw->id}}" class="btn btn-outline-info">Detail</a> 
+                                <a href="/siswa/{{ $ssw->id}}" class="btn btn-sm btn-info">
+                                    <i class="fa fa-eye"></i> Detail</a> 
                             </li>
                         @endforeach
                     </ul>

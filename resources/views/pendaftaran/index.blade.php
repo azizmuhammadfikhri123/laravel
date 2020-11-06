@@ -32,7 +32,7 @@
                         </strong>
                     </div>
                     <div class="pull-right">
-                        <a href="/pendaftaran/create" class="btn btn-success">
+                        <a href="/pendaftaran/create" class="btn btn-sm btn-success">
                             <i class="fa fa-plus"></i> New Data
                         </a>
                     </div>
@@ -47,7 +47,8 @@
                         @foreach ($pendaftaran as $pendaftaran)  
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{$pendaftaran->nama_lengkap}}
-                            <a href="/pendaftaran/{{$pendaftaran->id}}" class="btn btn-outline-primary">Detail</a>
+                            <a href="/pendaftaran/{{$pendaftaran->id}}" class="btn btn-sm btn-primary">
+                            <i class="fa fa-eye"></i> Detail</a>
                         </li>
                         @endforeach  
                     </ul>                   
